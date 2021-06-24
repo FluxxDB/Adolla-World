@@ -1,13 +1,12 @@
 import { Players, RunService } from "@rbxts/services";
 import { OnInit, Service } from "@rbxts/flamework";
+import { DATA_VERSION, DEFAULT_DATA } from "shared/globalData";
+import { server } from "shared/globalEvents";
 import ProfileService from "@rbxts/profileservice";
-import { DEFAULT_DATA } from "shared/globalData";
-import { GlobalEvents } from "shared/globalEvents";
 import playerObject from "../modules/playerObject";
 
 const isStudio = RunService.IsStudio();
-const events = GlobalEvents.server;
-const datastore = ProfileService.GetProfileStore("AdollaWorld", DEFAULT_DATA);
+const datastore = ProfileService.GetProfileStore(`Data${DATA_VERSION}`, DEFAULT_DATA);
 
 export const profiles = new Map<Player, playerObject>();
 
@@ -41,18 +40,21 @@ function loadData(player: Player) {
 @Service({
 	loadOrder: 0,
 })
-export class MyService implements OnInit {
+export class playerService implements OnInit {
 	onInit() {
-		events.connect("ready", (player) => {
+		server.connect("ready", (player) => {
 			if (profiles.has(player)) return;
+
 			const profile = loadData(player);
 			if (!profile) return;
+
 			profiles.set(player, new playerObject(player, profile));
 		});
 
 		Players.PlayerRemoving.Connect((player) => {
 			const playerProfile = profiles.get(player);
 			if (!playerProfile) return;
+
 			playerProfile.profile.Release();
 			profiles.delete(player);
 		});

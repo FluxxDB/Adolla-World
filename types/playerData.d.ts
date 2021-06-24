@@ -14,9 +14,10 @@ interface DefaultData {
 			b: number;
 		};
 		face: string;
-		clothing: number;
+		shirt: string;
+		pants: string;
 		bodyAccessory: number;
-		skinTone: number;
+		skinTone: BrickColorsByNumber[keyof BrickColorsByNumber];
 		lastName: string;
 		headAccessory: number;
 	};

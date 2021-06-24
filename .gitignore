@@ -1,4 +1,4 @@
-node_modules/
-out/
-.vscode/
-flamework.build
+**/node_modules
+**/out
+**/.vscode
+**/flamework.build
