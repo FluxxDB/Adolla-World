@@ -7,6 +7,8 @@ local PlayerService
 local RemoteEvent = require(Knit.Util.Remote.RemoteEvent)
 
 local assets = ReplicatedStorage:WaitForChild("Assets")
+local clothingsFolder = assets:WaitForChild("Clothing")
+local skinTones = assets:WaitForChild("SkinTone")
 
 local customizeEvent = RemoteEvent.new()
 local profiles
@@ -47,6 +49,15 @@ function CustomizationService.KnitStart()
             hairColor.g = object.Value.G
             hairColor.b = object.Value.B
             return
+        end
+
+        if parent == "clothing" then
+            characterData.Shirt = clothingsFolder:FindFirstChild(index).Shirt.ShirtTemplate
+            characterData.Pants = clothingsFolder:FindFirstChild(index).Pants.PantsTemplate
+        end
+
+        if parent == "skinTone" then
+            characterData.skinTone = skinTones:FindFirstChild(index).Value
         end
 
         characterData[parent] = index

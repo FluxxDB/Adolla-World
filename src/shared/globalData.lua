@@ -7,8 +7,9 @@ return {
 
         character = {
             lastName = "";
-            clothing = 1;
-            skinTone = 1;
+            shirt = "";
+            pants = "";
+            skinTone = "";
             face = "";
 
             headAccessory = 0;
