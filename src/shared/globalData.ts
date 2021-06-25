@@ -9,9 +9,10 @@ export const DEFAULT_DATA: DefaultData = {
 	character: {
 		hairColor: { r: 0, g: 0, b: 0 },
 		face: "",
-		clothing: 1,
+		shirt: "",
+		pants: "",
 		bodyAccessory: 0,
-		skinTone: 1,
+		skinTone: "White",
 		lastName: "",
 		headAccessory: 0,
 	},
