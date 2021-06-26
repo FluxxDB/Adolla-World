@@ -49,6 +49,7 @@ export class playerService implements OnInit {
 			if (!profile) return;
 
 			profiles.set(player, new playerObject(player, profile));
+			server.stateUpdate(player, "dataReady", profile.Data);
 		});
 
 		Players.PlayerRemoving.Connect((player) => {

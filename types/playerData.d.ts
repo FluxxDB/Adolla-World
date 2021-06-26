@@ -16,10 +16,10 @@ interface DefaultData {
 		face: string;
 		shirt: string;
 		pants: string;
-		bodyAccessory: number;
+		bodyAccessory: string;
 		skinTone: BrickColorsByNumber[keyof BrickColorsByNumber];
 		lastName: string;
-		headAccessory: number;
+		headAccessory: string;
 	};
 	generationSpins: number;
 	combatEXP: number;

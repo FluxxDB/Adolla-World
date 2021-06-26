@@ -2,12 +2,8 @@ import { Controller, OnStart } from "@rbxts/flamework";
 import { client } from "shared/globalEvents";
 
 @Controller({
-	loadOrder: 0,
+	loadOrder: 1,
 })
-export class load implements OnStart {
-	onStart() {
-		wait(1);
-		client.ready();
-		client.spawn();
-	}
+export class e implements OnStart {
+	onStart() {}
 }
