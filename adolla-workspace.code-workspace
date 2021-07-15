@@ -1,0 +1,82 @@
+{
+	"folders": [
+		{
+			"name": "Adolla-World",
+			"path": "."
+		},
+		{
+			"name": "shared",
+			"path": "src\\shared"
+		},
+		{
+			"name": "menu",
+			"path": "src\\menu"
+		},
+		{
+			"name": "world",
+			"path": "src\\world"
+		}
+	],
+	"settings": {
+		"[typescript]": {
+			"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+			"editor.formatOnSave": true
+		},
+		"[typescriptreact]": {
+			"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+			"editor.formatOnSave": true
+		},
+		"eslint.run": "onType",
+		"eslint.format.enable": true,
+		"typescript.tsdk": "node_modules/typescript/lib",
+		"files.eol": "\n",
+		"files.exclude": {
+		"**/node_modules": true,
+		"**/include": true,
+		"**/.vscode": true,
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		},
+		"cSpell.words": [
+			"adolla",
+			"billboardgui",
+			"camera",
+			"frame",
+			"imagebutton",
+			"imagelabel",
+			"leaderboard",
+			"leaderstats",
+			"pepe",
+			"rbxassetid",
+			"rbxts",
+			"rbxtsc",
+			"roact",
+			"roblox",
+			"rodux",
+			"screengui",
+			"scrollingframe",
+			"surfacegui",
+			"textbox",
+			"textbutton",
+			"textlabel",
+			"tsbuildinfo",
+			"uiaspectratioconstraint",
+			"uicorner",
+			"uigradient",
+			"uigridlayout",
+			"uilistlayout",
+			"uipadding",
+			"uipagelayout",
+			"uiscale",
+			"uisizeconstraint",
+			"uistroke",
+			"uitablelayout",
+			"uitextsizeconstraint",
+			"unmount",
+			"viewportframe"
+		]
+	}
+}

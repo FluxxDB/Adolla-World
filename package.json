@@ -1,0 +1,33 @@
+{
+  "name": "adolla-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:menu": "rbxtsc -p ./src/menu -i ./include",
+    "build:world": "rbxtsc -p ./src/world -i ./include",
+    "watch:menu": "rbxtsc -w -p ./src/menu -i ./include",
+    "watch:world": "rbxtsc -w -p ./src/world -i ./include",
+    "eslint": "npx eslint \"src/**/*.ts\" --max-warnings 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rbxts/compiler-types": "^1.1.1-types.5",
+    "@rbxts/types": "^1.0.499",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-roblox-ts": "0.0.29",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@rbxts/roact": "^1.3.0-ts.14",
+    "@rbxts/roact-rodux": "^0.2.2-ts.3",
+    "@rbxts/rodux": "^3.0.0-ts.3"
+  }
+}
